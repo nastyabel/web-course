@@ -4,12 +4,15 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "deploy:pages": "rm -rf dist && npm run build && gh-pages -d dist"
   },
   "author": "",
   "license": "ISC",
   "description": "",
-  "dependencies": {
-    "gh-pages": "^6.2.0"
+  "devDependencies": {
+    "dotenv-cli": "^7.4.4",
+    "gh-pages": "^6.2.0",
+    "parcel": "^2.13.2"
   }
 }
